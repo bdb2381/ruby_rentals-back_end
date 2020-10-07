@@ -7,8 +7,8 @@ class Api::V1::InventoriesController < ApplicationController
   end
 
   def show
-    inventory = Inventory.find_by(params[:id])
-    if user
+    inventory = Inventory.find_by(id: params[:id])
+    if inventory
       render json: inventory
     else 
       render json: { message: "This Inventory ID does not exist"}

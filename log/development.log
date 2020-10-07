@@ -2911,3 +2911,558 @@ Processing by Api::V1::ItemsController#index as HTML
 Completed 200 OK in 259ms (Views: 173.1ms | ActiveRecord: 29.5ms | Allocations: 44550)
 
 
+Started GET "/api/v1/items/1" for ::1 at 2020-10-07 15:41:30 -0700
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (84.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:9:in `show'
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 84.1ms | Allocations: 818)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "items".* FROM "items" WHERE (1) LIMIT $1
+                                             ^
+):
+  
+app/controllers/api/v1/items_controller.rb:9:in `show'
+Started GET "/api/v1/items/13" for ::1 at 2020-10-07 15:41:34 -0700
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (3.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (13) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:9:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 3.5ms | Allocations: 797)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "items".* FROM "items" WHERE (13) LIMIT $1
+                                             ^
+):
+  
+app/controllers/api/v1/items_controller.rb:9:in `show'
+Started GET "/api/v1/items" for ::1 at 2020-10-07 15:46:38 -0700
+Processing by Api::V1::ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (87.91ms)
+Completed 200 OK in 93ms (Views: 88.6ms | ActiveRecord: 3.8ms | Allocations: 28588)
+
+
+Started GET "/api/v1/items/13" for ::1 at 2020-10-07 15:46:47 -0700
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (75.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (13) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:9:in `show'
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 75.5ms | Allocations: 799)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "items".* FROM "items" WHERE (13) LIMIT $1
+                                             ^
+):
+  
+app/controllers/api/v1/items_controller.rb:9:in `show'
+Started GET "/api/v1/users" for ::1 at 2020-10-07 15:47:21 -0700
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.3ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.3ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.3ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.3ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mReceipt Load (0.4ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (167.73ms)
+Completed 200 OK in 282ms (Views: 211.8ms | ActiveRecord: 32.5ms | Allocations: 45350)
+
+
+Started GET "/api/v1/users/21" for ::1 at 2020-10-07 15:47:25 -0700
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mReceipt Load (2.9ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.08ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 4.4ms | Allocations: 3880)
+
+
+Started GET "/api/v1/inventories" for ::1 at 2020-10-07 15:47:36 -0700
+Processing by Api::V1::InventoriesController#index as HTML
+  [1m[36mInventory Load (0.9ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 36]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 37]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 38]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 39]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 40]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 41]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 42]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 43]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 44]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 45]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 46]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 47]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 48]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 49]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 51]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 52]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 53]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 54]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 55]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 56]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 57]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 58]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 59]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 60]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 61]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 62]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 63]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 64]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 65]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 66]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 67]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 68]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 69]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 70]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 71]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 72]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 73]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 74]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (1.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 75]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 76]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 77]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 78]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 79]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 80]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 81]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 82]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 83]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 84]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 85]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 86]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 87]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 88]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 89]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 90]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (725.74ms)
+Completed 200 OK in 737ms (Views: 692.8ms | ActiveRecord: 43.6ms | Allocations: 266756)
+
+
+Started GET "/api/v1/inventories/1" for ::1 at 2020-10-07 15:47:43 -0700
+Processing by Api::V1::InventoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInventory Load (1.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/inventories_controller.rb:10:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.4ms | Allocations: 798)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "inventories".* FROM "inventories" WHERE (1) LIMIT $1
+                                                         ^
+):
+  
+app/controllers/api/v1/inventories_controller.rb:10:in `show'
+Started GET "/api/v1/inventories/1" for ::1 at 2020-10-07 15:48:29 -0700
+Processing by Api::V1::InventoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/inventories_controller.rb:10:in `show'
+Completed 500 Internal Server Error in 448ms (ActiveRecord: 10.5ms | Allocations: 79884)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::InventoriesController:0x00007fb90d28a7f8>
+Did you mean?  super):
+  
+app/controllers/api/v1/inventories_controller.rb:11:in `show'
+Started GET "/api/v1/inventories/1" for ::1 at 2020-10-07 15:48:43 -0700
+Processing by Api::V1::InventoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/inventories_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:12:in `show'
+[active_model_serializers]   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."inventory_id" = $1[0m  [["inventory_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/inventories_controller.rb:12:in `show'
+[active_model_serializers] Rendered InventorySerializer with ActiveModelSerializers::Adapter::Attributes (171.84ms)
+Completed 200 OK in 292ms (Views: 181.4ms | ActiveRecord: 33.0ms | Allocations: 21051)
+
+
+Started GET "/api/v1/items/1" for ::1 at 2020-10-07 15:49:02 -0700
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:9:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 143ms (Views: 93.6ms | ActiveRecord: 6.1ms | Allocations: 2792)
+
+
+Started GET "/api/v1/items/13" for ::1 at 2020-10-07 15:49:06 -0700
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:9:in `show'
+[active_model_serializers]   [1m[36mInventory Load (0.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:11:in `show'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (89.45ms)
+Completed 200 OK in 185ms (Views: 114.4ms | ActiveRecord: 19.0ms | Allocations: 19210)
+
+

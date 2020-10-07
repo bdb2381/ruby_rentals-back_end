@@ -6,7 +6,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def show
-    item = Item.find_by(params[:id])
+    item = Item.find_by(id: params[:id])
     if item
       render json: item
     else 
