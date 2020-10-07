@@ -8,7 +8,11 @@ class Api::V1::InventoriesController < ApplicationController
 
   def show
     inventory = Inventory.find_by(params[:id])
-    render json: inventory
+    if user
+      render json: inventory
+    else 
+      render json: { message: "This Inventory ID does not exist"}
+    end 
   end
 
 

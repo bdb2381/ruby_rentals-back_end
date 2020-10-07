@@ -7,7 +7,10 @@ class Api::V1::ReservationsController < ApplicationController
 
   def show
     reservation = Reservations.find_by(params[:id])
-    render json: reservation
+    if reservation
+      render json: reservation
+    else 
+      render json: {message: "This Reservation ID does not exist"}
   end
 
 
