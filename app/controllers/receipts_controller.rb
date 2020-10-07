@@ -1,2 +1,0 @@
-class ReceiptsController < ApplicationController
-end
