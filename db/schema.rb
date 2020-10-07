@@ -29,12 +29,13 @@ ActiveRecord::Schema.define(version: 2020_10_07_002756) do
   create_table "items", force: :cascade do |t|
     t.string "brand"
     t.string "model"
-    t.string "type"
+    t.string "item_type"
     t.string "size"
     t.text "description"
     t.string "gear_photo_url"
     t.integer "model_year"
     t.integer "amount_available"
+    t.integer "day_rental_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -53,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_10_07_002756) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.decimal "amount", precision: 6, scale: 2
+    t.decimal "total_rental_amount", precision: 6, scale: 2
     t.decimal "tax", precision: 6, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

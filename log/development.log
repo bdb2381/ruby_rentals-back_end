@@ -119,3 +119,534 @@ FOREIGN KEY ("inventory_id")
   [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
   [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReservations (20201007002756)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (141.5ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002756"]]
+  [1m[35m (118.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInventories (20201007002737)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mDROP TABLE "inventories"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002737"]]
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20201007002700)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE "items"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002700"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20201007001355)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "transactions"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007001355"]]
+  [1m[35m (163.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20201007001355)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "total_rental_amount" decimal(6,2), "tax" decimal(6,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007001355"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20201007002700)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "brand" character varying, "model" character varying, "type" character varying, "size" character varying, "description" text, "gear_photo_url" character varying, "model_year" integer, "amount_available" integer, "day_rental_price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002700"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInventories (20201007002737)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "inventories" ("id" bigserial primary key, "sku" character varying, "rental_status" boolean, "condition" character varying, "date_bought" date, "item_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_fcf6633a1e"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_inventories_on_item_id" ON "inventories"  ("item_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002737"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReservations (20201007002756)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "start_date" date, "end_date" date, "user_id" bigint NOT NULL, "transaction_id" bigint NOT NULL, "inventory_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48a92fce51"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_6e0ff8593a"
+FOREIGN KEY ("transaction_id")
+  REFERENCES "transactions" ("id")
+, CONSTRAINT "fk_rails_4d43fad2ed"
+FOREIGN KEY ("inventory_id")
+  REFERENCES "inventories" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_user_id" ON "reservations"  ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_transaction_id" ON "reservations"  ("transaction_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_inventory_id" ON "reservations"  ("inventory_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002756"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (37.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mInventory Load (1.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mInventory Load (0.9ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mInventory Load (1.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mItem Load (26.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mInventory Load (11.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (17.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "bud@hane.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Colin"], ["last_name", "Barrows"], ["password_digest", "$2a$12$JWOC0.7B469bJTAHXUKGU.7UnVRf.oekUmCpR5Ik9Br2VAWjR0m7K"], ["street_address", "784 Franecki Fall"], ["city", "Lake Tamikahaven"], ["state", "AZ"], ["zip_code", "55495"], ["email", "bud@hane.org"], ["phone", "699.408.0966"], ["created_at", "2020-10-07 18:00:53.301911"], ["updated_at", "2020-10-07 18:00:53.301911"]]
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "juliette@powlowski-wunsch.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Dorthey"], ["last_name", "Blick"], ["password_digest", "$2a$12$RPVMZaFudtza5PRUkbs8HOi5.iVZDJdmS2ayQy4c4psDOGStBUGF."], ["street_address", "529 Thiel Ferry"], ["city", "New Johnie"], ["state", "WA"], ["zip_code", "23592"], ["email", "juliette@powlowski-wunsch.org"], ["phone", "168.603.4023"], ["created_at", "2020-10-07 18:00:53.647955"], ["updated_at", "2020-10-07 18:00:53.647955"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "danyel.lubowitz@lemke.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Willie"], ["last_name", "Block"], ["password_digest", "$2a$12$k9Slgy3.P8yCyrl.uIqsj.hqSZdom.aYmSWinLbz6R79HdIK/cvsK"], ["street_address", "95165 Melvina Dam"], ["city", "Alvaroland"], ["state", "HI"], ["zip_code", "95878-1061"], ["email", "danyel.lubowitz@lemke.name"], ["phone", "167-534-9827"], ["created_at", "2020-10-07 18:00:53.962981"], ["updated_at", "2020-10-07 18:00:53.962981"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "donte@feil.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Marco"], ["last_name", "Skiles"], ["password_digest", "$2a$12$OZCZjp/nTVIeoMcmVY43meapwbhh3xUq.e/norGN821ipcRud3f3a"], ["street_address", "8495 Ramonita Glens"], ["city", "Ebertview"], ["state", "SC"], ["zip_code", "05464-9893"], ["email", "donte@feil.name"], ["phone", "768-845-4433"], ["created_at", "2020-10-07 18:00:54.278909"], ["updated_at", "2020-10-07 18:00:54.278909"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "francesca_collier@champlin.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Shenna"], ["last_name", "Ankunding"], ["password_digest", "$2a$12$03N8kP9fIQYwvN9wDzDtjeNvTomlX9OIXWW6SGVFHpEx67qwYn0hq"], ["street_address", "893 Mueller Cove"], ["city", "East Kim"], ["state", "WY"], ["zip_code", "18459"], ["email", "francesca_collier@champlin.co"], ["phone", "(918) 638-6086"], ["created_at", "2020-10-07 18:00:54.593820"], ["updated_at", "2020-10-07 18:00:54.593820"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "tabatha_kuphal@corwin-abshire.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Phyliss"], ["last_name", "Anderson"], ["password_digest", "$2a$12$iIVAzAqiCgCk/hu56sSRV.n1fmUvfegT021KrWq0DXa9rq35JnUwG"], ["street_address", "18936 Percy Ford"], ["city", "Port Jefferson"], ["state", "WI"], ["zip_code", "98424-4038"], ["email", "tabatha_kuphal@corwin-abshire.com"], ["phone", "1-834-405-2392"], ["created_at", "2020-10-07 18:00:54.913604"], ["updated_at", "2020-10-07 18:00:54.913604"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "marianna@goodwin.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Melita"], ["last_name", "Renner"], ["password_digest", "$2a$12$dt2qetnSPsb7OxoQ0EMizuF/ZMECjOM8h6lFcJRyGPS7Jme9gz21u"], ["street_address", "680 Harry Loaf"], ["city", "Lake Caleb"], ["state", "MT"], ["zip_code", "20585"], ["email", "marianna@goodwin.net"], ["phone", "1-159-157-4854"], ["created_at", "2020-10-07 18:00:55.224780"], ["updated_at", "2020-10-07 18:00:55.224780"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "luciano_stamm@grady-dickinson.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Tracey"], ["last_name", "Lowe"], ["password_digest", "$2a$12$n8BcxCQo44gC.I0CrIgaDeWnDzMNPiXeEDHg48hmpAZZATIRR95bC"], ["street_address", "319 Adolfo Squares"], ["city", "Jerroldborough"], ["state", "WA"], ["zip_code", "87814"], ["email", "luciano_stamm@grady-dickinson.name"], ["phone", "(886) 425-0714"], ["created_at", "2020-10-07 18:00:55.533611"], ["updated_at", "2020-10-07 18:00:55.533611"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "wendi.brown@hartmann-jacobs.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Eric"], ["last_name", "Osinski"], ["password_digest", "$2a$12$BMZ3DWXHi1xJm26stqP2mOfN/OZmpB9VNjk5M55PrNaqICbgmP5oC"], ["street_address", "40344 Deana Courts"], ["city", "Kyleport"], ["state", "IL"], ["zip_code", "71965"], ["email", "wendi.brown@hartmann-jacobs.name"], ["phone", "152.736.3610"], ["created_at", "2020-10-07 18:00:55.843062"], ["updated_at", "2020-10-07 18:00:55.843062"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "floria.weissnat@yost-nader.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Arlen"], ["last_name", "Ziemann"], ["password_digest", "$2a$12$7GVgYYq4Bf1tktJoosFyluMkZ0XEvG1YWQ91ccD1shM1.SAeW1IlG"], ["street_address", "27162 McLaughlin Road"], ["city", "Leandroshire"], ["state", "AZ"], ["zip_code", "44091"], ["email", "floria.weissnat@yost-nader.name"], ["phone", "203.858.5346"], ["created_at", "2020-10-07 18:00:56.151602"], ["updated_at", "2020-10-07 18:00:56.151602"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReservations (20201007002756)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002756"]]
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInventories (20201007002737)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE "inventories"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002737"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20201007002700)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "items"[0m
+  [1m[36mprimary::SchemaMigration Destroy (2.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201007002700"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5668528099445277360)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20201007002700)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "brand" character varying, "model" character varying, "item_type" character varying, "size" character varying, "description" text, "gear_photo_url" character varying, "model_year" integer, "amount_available" integer, "day_rental_price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002700"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInventories (20201007002737)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "inventories" ("id" bigserial primary key, "sku" character varying, "rental_status" boolean, "condition" character varying, "date_bought" date, "item_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_fcf6633a1e"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_inventories_on_item_id" ON "inventories"  ("item_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002737"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReservations (20201007002756)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "start_date" date, "end_date" date, "user_id" bigint NOT NULL, "transaction_id" bigint NOT NULL, "inventory_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48a92fce51"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_6e0ff8593a"
+FOREIGN KEY ("transaction_id")
+  REFERENCES "transactions" ("id")
+, CONSTRAINT "fk_rails_4d43fad2ed"
+FOREIGN KEY ("inventory_id")
+  REFERENCES "inventories" ("id")
+)[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_user_id" ON "reservations"  ("user_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_transaction_id" ON "reservations"  ("transaction_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_reservations_on_inventory_id" ON "reservations"  ("inventory_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201007002756"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5668528099445277360)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mInventory Load (1.0ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "jo@nolan-gerlach.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Markus"], ["last_name", "Bergstrom"], ["password_digest", "$2a$12$qgmIOMAbDDI8wjNZa/hJDuayuFXpKoxZEbai0GPzXOj1xWR7sIgHC"], ["street_address", "4134 Bogisich Ports"], ["city", "Horaceshire"], ["state", "CT"], ["zip_code", "98764"], ["email", "jo@nolan-gerlach.net"], ["phone", "1-279-307-8694"], ["created_at", "2020-10-07 18:04:28.887026"], ["updated_at", "2020-10-07 18:04:28.887026"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "rupert@rowe-macgyver.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Reyna"], ["last_name", "Mueller"], ["password_digest", "$2a$12$UWs5gvMRCagS9GJXH6dJDuYG5qPDE/AR5KvYbFz6OZDNrFM6DGwZe"], ["street_address", "7184 Roberts Shores"], ["city", "New Kelsiborough"], ["state", "AZ"], ["zip_code", "47576"], ["email", "rupert@rowe-macgyver.info"], ["phone", "(176) 991-8914"], ["created_at", "2020-10-07 18:04:29.200214"], ["updated_at", "2020-10-07 18:04:29.200214"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "shaina_glover@becker.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Clemente"], ["last_name", "Stoltenberg"], ["password_digest", "$2a$12$gqZsvyuUrENLF/J85maxAuhTGYyosV4s0HtXdew0m29mIe/bfQtrO"], ["street_address", "1722 Keneth Skyway"], ["city", "Port Theressaberg"], ["state", "MO"], ["zip_code", "45093-5411"], ["email", "shaina_glover@becker.org"], ["phone", "(947) 483-6235"], ["created_at", "2020-10-07 18:04:29.509086"], ["updated_at", "2020-10-07 18:04:29.509086"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "verona@johnston.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Jaye"], ["last_name", "Rath"], ["password_digest", "$2a$12$wTKvcxssc4AEOyoob.Qg9Ogpobk/pTWJ/zFIVJy271CNuePMHpSh6"], ["street_address", "23176 Kling Trafficway"], ["city", "Lake Shirl"], ["state", "MS"], ["zip_code", "06106"], ["email", "verona@johnston.co"], ["phone", "843.903.6032"], ["created_at", "2020-10-07 18:04:29.815451"], ["updated_at", "2020-10-07 18:04:29.815451"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "dee_schoen@swift-harvey.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Rochell"], ["last_name", "Powlowski"], ["password_digest", "$2a$12$OtC5K70NwVUBTBhIkb6fLeGzX47yS4o2ljfQTF6hTYY.f3tzNLIt2"], ["street_address", "1371 Valentin Ville"], ["city", "Kilbackport"], ["state", "KS"], ["zip_code", "68283"], ["email", "dee_schoen@swift-harvey.name"], ["phone", "1-187-131-4522"], ["created_at", "2020-10-07 18:04:30.122488"], ["updated_at", "2020-10-07 18:04:30.122488"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "nickolas_thompson@kirlin.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Kala"], ["last_name", "Bartell"], ["password_digest", "$2a$12$C6s6P6KJuK4tn7IK/ERzFethZXV9T7bC3CTNXL/sU7qqV8vjciDKK"], ["street_address", "6031 Minda Ville"], ["city", "Grantton"], ["state", "NM"], ["zip_code", "50159-4655"], ["email", "nickolas_thompson@kirlin.co"], ["phone", "(216) 824-6711"], ["created_at", "2020-10-07 18:04:30.434260"], ["updated_at", "2020-10-07 18:04:30.434260"]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "dani.haley@smitham-nitzsche.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Manual"], ["last_name", "Cronin"], ["password_digest", "$2a$12$aqUsXyFvpAuKZU5ipf3kTukDvokc0Ozgqz.BCWzgH4Z6LumNzzl.2"], ["street_address", "2919 Kuhlman Hill"], ["city", "Port Raylene"], ["state", "AR"], ["zip_code", "48469"], ["email", "dani.haley@smitham-nitzsche.io"], ["phone", "1-751-989-6804"], ["created_at", "2020-10-07 18:04:30.794620"], ["updated_at", "2020-10-07 18:04:30.794620"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "dakota@marvin.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Tressie"], ["last_name", "Gibson"], ["password_digest", "$2a$12$FTNehgH4kC89gE5dZwNRuO2glQzxgn2r0nFggDZfBeyTi9V3nUhv6"], ["street_address", "86269 Cathleen Land"], ["city", "Tatyanaland"], ["state", "IN"], ["zip_code", "20361"], ["email", "dakota@marvin.info"], ["phone", "(220) 296-9064"], ["created_at", "2020-10-07 18:04:31.106036"], ["updated_at", "2020-10-07 18:04:31.106036"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "tammera@franecki.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Hilaria"], ["last_name", "Hintz"], ["password_digest", "$2a$12$2KqFAy4Ef6wd/VKTjfsZw.jeC9aBB9rzz6rsf1egShDEvB9MY27Hm"], ["street_address", "38236 Mason Isle"], ["city", "North Geoffreyhaven"], ["state", "CT"], ["zip_code", "52744-9465"], ["email", "tammera@franecki.biz"], ["phone", "(865) 097-3246"], ["created_at", "2020-10-07 18:04:31.420927"], ["updated_at", "2020-10-07 18:04:31.420927"]]
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "willodean@barrows.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Willa"], ["last_name", "Willms"], ["password_digest", "$2a$12$DbwDOfJ7LNt4PvmVIxE6OOZFhq2ClRl88e8jA2fos.0UMf3lH9kP2"], ["street_address", "9823 Sammie View"], ["city", "Casandrachester"], ["state", "CO"], ["zip_code", "47523-9776"], ["email", "willodean@barrows.com"], ["phone", "226.163.5465"], ["created_at", "2020-10-07 18:04:31.774320"], ["updated_at", "2020-10-07 18:04:31.774320"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "Mission"], ["item_type", "Backpack"], ["size", "75 Liters"], ["description", "Durable top-loading alpine pack engineered for everything from summer alpine cragging to gear-intensive winter expeditions, the Mission 75 gets your gear to the base in comfort."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwde1f0a5f/products/F18_Product_Images/Equipment/681185_CBBK_Cobalt_Black_Mission75_Frnt.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 30], ["created_at", "2020-10-07 18:04:31.794659"], ["updated_at", "2020-10-07 18:04:31.794659"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "SPEED PACK"], ["item_type", "Backpack"], ["size", "50 Liters"], ["description", "Time-tested on-route alpine pack for light, alpine-style ascents on rock, snow or ice, the Speed 50 is streamlined, strippable and designed to move with you."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwfa12cd2f/products/packs/S16/681176_SULF_Speed_50_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:04:31.800771"], ["updated_at", "2020-10-07 18:04:31.800771"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "CREEK PACK"], ["item_type", "Backpack"], ["size", "35 Liters"], ["description", "A deep top-loader ideal for gear-intensive cragging sessions, the Creek 35 is inspired by our haul bags and built with easy access and unparalleled durability in mind."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwc9aea4eb/products/packs/S16/681174_BLAK_Creek_35_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:04:31.805937"], ["updated_at", "2020-10-07 18:04:31.805937"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Women’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/jsgdrcdj5pbnwxlrw0m1-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:04:31.811073"], ["updated_at", "2020-10-07 18:04:31.811073"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Men’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/yst4i6scbicpz0mena9b-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:04:31.816142"], ["updated_at", "2020-10-07 18:04:31.816142"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Firefly™ Backpacking Tent"], ["item_type", "Tent"], ["size", "2 Person"], ["description", "Firefly™ strikes a unique balance between affordability and lightweight livability in a freestanding backpacking tent. The large trapezoidal vestibules are designed to fit gear without obstructing entry and have multiple roll-back points to customize visibility and airflow. It's agile on the trail, quick to set up, and well-appointed for rejuvenation in camp."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/szegowzpck69xqeeiayp-1024x866.jp"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:04:31.821409"], ["updated_at", "2020-10-07 18:04:31.821409"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "tran@schiller-price.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Russel"], ["last_name", "Oberbrunner"], ["password_digest", "$2a$12$PiMn50jXt82Ptqf/eqhAguFgkeAE/OUlsDKU0ZXObkbRwjRSpR2Ee"], ["street_address", "520 Conn Throughway"], ["city", "Chadhaven"], ["state", "RI"], ["zip_code", "13034-3178"], ["email", "tran@schiller-price.org"], ["phone", "783-893-5917"], ["created_at", "2020-10-07 18:07:00.327817"], ["updated_at", "2020-10-07 18:07:00.327817"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "alfred.bauch@schaden-renner.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Mattie"], ["last_name", "Morar"], ["password_digest", "$2a$12$8DZiz984yDt.ZmqopAqpS.4Rh2MBtCA4bAtZbh/oGjZdlcvGAmetO"], ["street_address", "95891 Alfredo Village"], ["city", "Beerstad"], ["state", "OK"], ["zip_code", "36073-0463"], ["email", "alfred.bauch@schaden-renner.biz"], ["phone", "558.146.5512"], ["created_at", "2020-10-07 18:07:00.633056"], ["updated_at", "2020-10-07 18:07:00.633056"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "daron.rohan@gaylord-dach.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Willis"], ["last_name", "Bogan"], ["password_digest", "$2a$12$xaPsd5HTM3FPl7xg4xkuuuddngSbpfwIQDVebGsDQbIXYLNr8G22W"], ["street_address", "9080 Benjamin Drive"], ["city", "East Dominick"], ["state", "WV"], ["zip_code", "56227-2106"], ["email", "daron.rohan@gaylord-dach.org"], ["phone", "1-944-169-4195"], ["created_at", "2020-10-07 18:07:00.943135"], ["updated_at", "2020-10-07 18:07:00.943135"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "perry_dietrich@watsica.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Justin"], ["last_name", "Hane"], ["password_digest", "$2a$12$MvULW5TfYBeRQQJ2nXORoO/E2I.GZJ2SE4A1s9TeD2wbqITGNPq2e"], ["street_address", "362 Jean Crossroad"], ["city", "Nathanton"], ["state", "AK"], ["zip_code", "25103-2599"], ["email", "perry_dietrich@watsica.net"], ["phone", "439.968.8342"], ["created_at", "2020-10-07 18:07:01.248868"], ["updated_at", "2020-10-07 18:07:01.248868"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "sherrie@purdy.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Jon"], ["last_name", "Green"], ["password_digest", "$2a$12$GhRahqu18ym8GZOglwpWoeChJ65462yDCLASESQIsrpUaShtLrN72"], ["street_address", "83848 Buckridge Stravenue"], ["city", "Dietrichtown"], ["state", "DE"], ["zip_code", "62951"], ["email", "sherrie@purdy.biz"], ["phone", "159-594-4526"], ["created_at", "2020-10-07 18:07:01.557283"], ["updated_at", "2020-10-07 18:07:01.557283"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "delena@mccullough-ullrich.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Jeffery"], ["last_name", "Ratke"], ["password_digest", "$2a$12$Mdhmx19JjDLaWrqpNnwm7uXStjCeEh1kXzG13FTfMdYbE7NHFMbPO"], ["street_address", "592 Guy Ferry"], ["city", "Nadermouth"], ["state", "SD"], ["zip_code", "00367"], ["email", "delena@mccullough-ullrich.io"], ["phone", "940-471-6231"], ["created_at", "2020-10-07 18:07:01.874816"], ["updated_at", "2020-10-07 18:07:01.874816"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "nilsa@nader-schroeder.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Bo"], ["last_name", "Marquardt"], ["password_digest", "$2a$12$Tw1.qg1Ccb/I8uqCgdtt5upAeVfdYyGHsfNb2mApytt0n2nK5yxDa"], ["street_address", "848 Leola Vista"], ["city", "Jacobiburgh"], ["state", "CT"], ["zip_code", "60611-0708"], ["email", "nilsa@nader-schroeder.net"], ["phone", "(409) 168-8824"], ["created_at", "2020-10-07 18:07:02.180535"], ["updated_at", "2020-10-07 18:07:02.180535"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "clemmie@cummings.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Wilburn"], ["last_name", "Runte"], ["password_digest", "$2a$12$Z5rowLgnN8WPyVtoUp6a2eR9y9u14y.Kpm3TdLzJcMigdna4cOVTm"], ["street_address", "38187 Fannie Green"], ["city", "East Lindsayland"], ["state", "IN"], ["zip_code", "04831"], ["email", "clemmie@cummings.co"], ["phone", "490-157-3513"], ["created_at", "2020-10-07 18:07:02.488167"], ["updated_at", "2020-10-07 18:07:02.488167"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "basilia.rempel@berge-bechtelar.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Marybeth"], ["last_name", "Morar"], ["password_digest", "$2a$12$yDbojtRzLjVBu10idwdRN.li3gIc5BOop7VJhshw1gmgrBMglJtpW"], ["street_address", "2161 Lynwood Streets"], ["city", "South Phylisville"], ["state", "FL"], ["zip_code", "23588-4903"], ["email", "basilia.rempel@berge-bechtelar.com"], ["phone", "959-993-9374"], ["created_at", "2020-10-07 18:07:02.795657"], ["updated_at", "2020-10-07 18:07:02.795657"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "lara_wilderman@bartell-leuschke.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Geraldo"], ["last_name", "Bode"], ["password_digest", "$2a$12$XNfLsZMzqAY1BKUNAgSvj.utvCxO5osg7IvXo5gGeFrQpMoKqotsi"], ["street_address", "2968 Reichel Curve"], ["city", "Barrowsborough"], ["state", "AR"], ["zip_code", "70522"], ["email", "lara_wilderman@bartell-leuschke.com"], ["phone", "1-192-955-0012"], ["created_at", "2020-10-07 18:07:03.101610"], ["updated_at", "2020-10-07 18:07:03.101610"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "Mission"], ["item_type", "Backpack"], ["size", "75 Liters"], ["description", "Durable top-loading alpine pack engineered for everything from summer alpine cragging to gear-intensive winter expeditions, the Mission 75 gets your gear to the base in comfort."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwde1f0a5f/products/F18_Product_Images/Equipment/681185_CBBK_Cobalt_Black_Mission75_Frnt.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 30], ["created_at", "2020-10-07 18:07:03.105429"], ["updated_at", "2020-10-07 18:07:03.105429"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "SPEED PACK"], ["item_type", "Backpack"], ["size", "50 Liters"], ["description", "Time-tested on-route alpine pack for light, alpine-style ascents on rock, snow or ice, the Speed 50 is streamlined, strippable and designed to move with you."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwfa12cd2f/products/packs/S16/681176_SULF_Speed_50_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:07:03.110294"], ["updated_at", "2020-10-07 18:07:03.110294"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "CREEK PACK"], ["item_type", "Backpack"], ["size", "35 Liters"], ["description", "A deep top-loader ideal for gear-intensive cragging sessions, the Creek 35 is inspired by our haul bags and built with easy access and unparalleled durability in mind."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwc9aea4eb/products/packs/S16/681174_BLAK_Creek_35_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:07:03.115413"], ["updated_at", "2020-10-07 18:07:03.115413"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Women’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/jsgdrcdj5pbnwxlrw0m1-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:07:03.120879"], ["updated_at", "2020-10-07 18:07:03.120879"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Men’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/yst4i6scbicpz0mena9b-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:07:03.126943"], ["updated_at", "2020-10-07 18:07:03.126943"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Firefly™ Backpacking Tent"], ["item_type", "Tent"], ["size", "2 Person"], ["description", "Firefly™ strikes a unique balance between affordability and lightweight livability in a freestanding backpacking tent. The large trapezoidal vestibules are designed to fit gear without obstructing entry and have multiple roll-back points to customize visibility and airflow. It's agile on the trail, quick to set up, and well-appointed for rejuvenation in camp."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/szegowzpck69xqeeiayp-1024x866.jp"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:07:03.132504"], ["updated_at", "2020-10-07 18:07:03.132504"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (1.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "deandre@ryan-okon.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Napoleon"], ["last_name", "Farrell"], ["password_digest", "$2a$12$kNr3kDxWuzYz65DOmnzWIutGSB1UydHwrsVXFhctTL3rRiNAKDkyu"], ["street_address", "88984 Bradtke Ways"], ["city", "Hesselfort"], ["state", "UT"], ["zip_code", "75657-1422"], ["email", "deandre@ryan-okon.org"], ["phone", "(356) 614-2150"], ["created_at", "2020-10-07 18:08:26.389295"], ["updated_at", "2020-10-07 18:08:26.389295"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "rosita_daniel@nicolas.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Connie"], ["last_name", "Gerhold"], ["password_digest", "$2a$12$V3.1r/fjSJ8DDE90fJcDFOQIBxq7l0zbjhWrnmwGl4Fgu2GheFMTe"], ["street_address", "785 Bee Drives"], ["city", "Kshlerinmouth"], ["state", "AR"], ["zip_code", "95308"], ["email", "rosita_daniel@nicolas.io"], ["phone", "(801) 819-2704"], ["created_at", "2020-10-07 18:08:26.708747"], ["updated_at", "2020-10-07 18:08:26.708747"]]
+  [1m[35m (37.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "elyse@price-metz.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Lyman"], ["last_name", "Schmitt"], ["password_digest", "$2a$12$7pgOaWreTrNzxwasU87/hO4rZX4y1oLJYIE8/pAzLzx3XEtje4TqO"], ["street_address", "598 Deckow Club"], ["city", "Shaundachester"], ["state", "NV"], ["zip_code", "77763"], ["email", "elyse@price-metz.org"], ["phone", "186.373.6565"], ["created_at", "2020-10-07 18:08:27.053616"], ["updated_at", "2020-10-07 18:08:27.053616"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "sierra.bednar@beahan.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Jamal"], ["last_name", "Ebert"], ["password_digest", "$2a$12$bPWOLl272SNB54a4C.LhA..A1NyoogikmlMvbkxtuP6EA6W7JsjBC"], ["street_address", "16646 Bryce Forges"], ["city", "West Tena"], ["state", "TN"], ["zip_code", "90486-6319"], ["email", "sierra.bednar@beahan.co"], ["phone", "728.044.1056"], ["created_at", "2020-10-07 18:08:27.353429"], ["updated_at", "2020-10-07 18:08:27.353429"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "emiko@schultz.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Kirk"], ["last_name", "Paucek"], ["password_digest", "$2a$12$ab5xxrIrrdTYLOSmx6J4v.oXKLPlf8NDcsRlkm3bfezL7Yc.QnDCO"], ["street_address", "795 Haag Neck"], ["city", "Bergnaumview"], ["state", "OH"], ["zip_code", "58877-5738"], ["email", "emiko@schultz.co"], ["phone", "1-199-252-2362"], ["created_at", "2020-10-07 18:08:27.663295"], ["updated_at", "2020-10-07 18:08:27.663295"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "melony.terry@huels.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Rashida"], ["last_name", "Ebert"], ["password_digest", "$2a$12$SVto53Jw5aDeQe/qu2JT7uWFnhfbXECIyuGnqSY7urM1sTe6rlKZ."], ["street_address", "20907 Dreama Mountains"], ["city", "South Delmarstad"], ["state", "SC"], ["zip_code", "71040-6663"], ["email", "melony.terry@huels.co"], ["phone", "(184) 246-5830"], ["created_at", "2020-10-07 18:08:27.980211"], ["updated_at", "2020-10-07 18:08:27.980211"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "russell_abshire@green.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Marine"], ["last_name", "Gottlieb"], ["password_digest", "$2a$12$fkGttb7yuMYpN7VCOh1a4OgUOaeXoUz18UrMl0jcpQzuw9y65Hu7W"], ["street_address", "761 Skiles Spurs"], ["city", "New Chaston"], ["state", "AZ"], ["zip_code", "96178"], ["email", "russell_abshire@green.com"], ["phone", "234.352.4430"], ["created_at", "2020-10-07 18:08:28.286782"], ["updated_at", "2020-10-07 18:08:28.286782"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "devon@rohan.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Kathline"], ["last_name", "Witting"], ["password_digest", "$2a$12$B3Uz3lcoiTF8g0pD1lIxTOGonoq0ptwPf46lm/kpS9yvWIBCqdGaK"], ["street_address", "2458 Carmine Shores"], ["city", "Port Garymouth"], ["state", "IA"], ["zip_code", "80475-8161"], ["email", "devon@rohan.com"], ["phone", "1-759-319-0849"], ["created_at", "2020-10-07 18:08:28.608079"], ["updated_at", "2020-10-07 18:08:28.608079"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "chris_schulist@kuphal-schneider.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Franklin"], ["last_name", "Brekke"], ["password_digest", "$2a$12$DRtNVPA9D/c82UNoEz3NjuBdJ3wMcHEo6j0RkUGZqypW2v9l9l8.i"], ["street_address", "143 Raynor Mill"], ["city", "Irvingport"], ["state", "GA"], ["zip_code", "37210"], ["email", "chris_schulist@kuphal-schneider.net"], ["phone", "(455) 607-9712"], ["created_at", "2020-10-07 18:08:28.921710"], ["updated_at", "2020-10-07 18:08:28.921710"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "latrina@weber-mante.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Roberto"], ["last_name", "Klein"], ["password_digest", "$2a$12$lpR4c27vc/2xUg7XFPTlrOs2rnoj5wnuamyl4234fQyGeGYPkGgle"], ["street_address", "287 Bergnaum Flats"], ["city", "South Candida"], ["state", "MS"], ["zip_code", "17121-5039"], ["email", "latrina@weber-mante.com"], ["phone", "699.592.0986"], ["created_at", "2020-10-07 18:08:29.236729"], ["updated_at", "2020-10-07 18:08:29.236729"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "Mission"], ["item_type", "Backpack"], ["size", "75 Liters"], ["description", "Durable top-loading alpine pack engineered for everything from summer alpine cragging to gear-intensive winter expeditions, the Mission 75 gets your gear to the base in comfort."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwde1f0a5f/products/F18_Product_Images/Equipment/681185_CBBK_Cobalt_Black_Mission75_Frnt.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 30], ["created_at", "2020-10-07 18:08:29.240951"], ["updated_at", "2020-10-07 18:08:29.240951"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "SPEED PACK"], ["item_type", "Backpack"], ["size", "50 Liters"], ["description", "Time-tested on-route alpine pack for light, alpine-style ascents on rock, snow or ice, the Speed 50 is streamlined, strippable and designed to move with you."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwfa12cd2f/products/packs/S16/681176_SULF_Speed_50_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:08:29.246196"], ["updated_at", "2020-10-07 18:08:29.246196"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Black Diamond"], ["model", "CREEK PACK"], ["item_type", "Backpack"], ["size", "35 Liters"], ["description", "A deep top-loader ideal for gear-intensive cragging sessions, the Creek 35 is inspired by our haul bags and built with easy access and unparalleled durability in mind."], ["gear_photo_url", "https://www.blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dwc9aea4eb/products/packs/S16/681174_BLAK_Creek_35_Pack_Front_web.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:08:29.251211"], ["updated_at", "2020-10-07 18:08:29.251211"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Women’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/jsgdrcdj5pbnwxlrw0m1-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:08:29.256098"], ["updated_at", "2020-10-07 18:08:29.256098"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Tempo™ Men’s Synthetic Sleeping Bag"], ["item_type", "Sleeping Bag"], ["size", "Regular"], ["description", "Insulated with synthetic Stratofiber™, Tempo™ offers the best blend of moisture resistance, comfort, packability, and affordability. An integrated pillow pocket allows a jacket, extra clothes, or a Fillo™ to be stuffed into the sleeve opening for a handy pillow-on-the-go, while Blanket Fold™ provides extra tucked-in comfort and temperature regulation mid-season. Left-sided zippers on Men’s and right-sided zippers on Women’s allow Tempo™ to zip together for a double version of these favorite sleeping bags."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/yst4i6scbicpz0mena9b-1024x866.jpg"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 20], ["created_at", "2020-10-07 18:08:29.261832"], ["updated_at", "2020-10-07 18:08:29.261832"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("brand", "model", "item_type", "size", "description", "gear_photo_url", "model_year", "amount_available", "day_rental_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["brand", "Nemo"], ["model", "Firefly™ Backpacking Tent"], ["item_type", "Tent"], ["size", "2 Person"], ["description", "Firefly™ strikes a unique balance between affordability and lightweight livability in a freestanding backpacking tent. The large trapezoidal vestibules are designed to fit gear without obstructing entry and have multiple roll-back points to customize visibility and airflow. It's agile on the trail, quick to set up, and well-appointed for rejuvenation in camp."], ["gear_photo_url", "https://www.nemoequipment.com/wp-content/uploads/szegowzpck69xqeeiayp-1024x866.jp"], ["model_year", 2020], ["amount_available", 15], ["day_rental_price", 25], ["created_at", "2020-10-07 18:08:29.266929"], ["updated_at", "2020-10-07 18:08:29.266929"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
