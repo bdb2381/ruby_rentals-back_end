@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2020-10-06
+  end_date: 2020-10-06
+  user: one
+  transaction: one
+  inventory: one
+
+two:
+  start_date: 2020-10-06
+  end_date: 2020-10-06
+  user: two
+  transaction: two
+  inventory: two

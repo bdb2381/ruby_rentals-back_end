@@ -1,0 +1,13 @@
+      invoke  active_record
+      remove    db/migrate/20201006235922_create_transactions.rb
+      create    db/migrate/20201007000112_create_transactions.rb
+   identical    app/models/transaction.rb
+      invoke    test_unit
+   identical      test/models/transaction_test.rb
+       force      test/fixtures/transactions.yml
+      invoke  controller
+   identical    app/controllers/transactions_controller.rb
+      invoke    test_unit
+   identical      test/controllers/transactions_controller_test.rb
+      invoke  resource_route
+       route    resources :transactions

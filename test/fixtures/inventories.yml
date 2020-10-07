@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  rental_status: false
+  condition: MyString
+  date_bought: 2020-10-06
+  item: one
+
+two:
+  sku: MyString
+  rental_status: false
+  condition: MyString
+  date_bought: 2020-10-06
+  item: two
