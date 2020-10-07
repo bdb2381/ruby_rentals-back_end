@@ -110,14 +110,14 @@ Item.create(
 )
 
 
-n=1
+n = 1
 until n == 6 do
 15.times do Inventory.create(
   sku: Faker::Number.number(digits: 5),
   rental_status: true,
   condition: "good",
   date_bought: 01/01/2020,
-  item: n     # foreign_key
+  item_id: n     # foreign_key from items table
 )
   end
   n +=1

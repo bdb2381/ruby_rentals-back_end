@@ -40,24 +40,24 @@ ActiveRecord::Schema.define(version: 2020_10_07_002756) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reservations", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
-    t.bigint "user_id", null: false
-    t.bigint "transaction_id", null: false
-    t.bigint "inventory_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["inventory_id"], name: "index_reservations_on_inventory_id"
-    t.index ["transaction_id"], name: "index_reservations_on_transaction_id"
-    t.index ["user_id"], name: "index_reservations_on_user_id"
-  end
-
-  create_table "transactions", force: :cascade do |t|
+  create_table "receipts", force: :cascade do |t|
     t.decimal "total_rental_amount", precision: 6, scale: 2
     t.decimal "tax", precision: 6, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "receipt_id", null: false
+    t.bigint "inventory_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["inventory_id"], name: "index_reservations_on_inventory_id"
+    t.index ["receipt_id"], name: "index_reservations_on_receipt_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,6 +76,6 @@ ActiveRecord::Schema.define(version: 2020_10_07_002756) do
 
   add_foreign_key "inventories", "items"
   add_foreign_key "reservations", "inventories"
-  add_foreign_key "reservations", "transactions"
+  add_foreign_key "reservations", "receipts"
   add_foreign_key "reservations", "users"
 end

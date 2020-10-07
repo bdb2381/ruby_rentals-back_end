@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
-  has_many :transactions, through: :reservations, dependent: :destroy
+  has_many :receipts, through: :reservations, dependent: :destroy
 
 
 
