@@ -11,7 +11,7 @@ class Api::V1::ReservationsController < ApplicationController
       render json: reservation
     else 
       render json: {message: "This Reservation ID does not exist"}
+    end
   end
 
-
-end
+end 

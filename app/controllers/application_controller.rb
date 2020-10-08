@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::API
-  before_action :authorized
+  
+  ########################
+  # uncomment before_action when ready to implement auth on front end
+  # before_action :authorized
 
   def encode_token(payload)
     # payload is the user 
