@@ -3,6 +3,15 @@ class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized, only: [:create]
 
   ########################
+  # user accesses profile with a new JWT token
+  ########################
+  def profile
+    render json: { 
+      user: UserSerializer.new(current_user)
+    }, status: :accepted
+  end
+
+  ########################
   # create a new user and issue a JWT token
   ########################
   def create
