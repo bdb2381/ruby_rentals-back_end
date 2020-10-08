@@ -5848,3 +5848,84 @@ Processing by Api::V1::UsersController#create as JSON
 Completed 201 Created in 1273ms (Views: 351.1ms | ActiveRecord: 128.7ms | Allocations: 13014)
 
 
+Started POST "/api/v1/users" for ::1 at 2020-10-08 11:33:42 -0700
+  
+SyntaxError (/Users/brad/Flatiron/Projects/Mod5/back_end/app/controllers/application_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/application_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/users" for ::1 at 2020-10-08 11:44:49 -0700
+Started POST "/api/v1/users" for ::1 at 2020-10-08 12:03:37 -0700
+  [1m[35m (35.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"beggs@gmail.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (25.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "beggs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Brad"], ["last_name", "Beggs"], ["password_digest", "$2a$12$C.jgZRHs3orKL/8oBNxNZ.iqUh1JldS5fdns4yAYk7D2fv1D.Zwcq"], ["street_address", "111 One St"], ["city", "Seattle"], ["state", "WA"], ["zip_code", "98711"], ["email", "beggs@gmail.com"], ["phone", "425-425-1234"], ["created_at", "2020-10-08 19:03:38.951243"], ["updated_at", "2020-10-08 19:03:38.951243"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["email", "beggs@gmail.com"], ["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 721ms (ActiveRecord: 137.3ms | Allocations: 14591)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:9:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-10-08 13:27:41 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"beggs@gmail.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (7.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "beggs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "beggs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 406 Not Acceptable in 1911ms (Views: 112.1ms | ActiveRecord: 146.6ms | Allocations: 207895)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-10-08 13:28:28 -0700
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"beggs@gmail.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "beggs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "beggs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 406 Not Acceptable in 579ms (Views: 1.2ms | ActiveRecord: 15.1ms | Allocations: 13100)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-10-08 13:48:49 -0700
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"bgs@gmail.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (23.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "bgs@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "street_address", "city", "state", "zip_code", "email", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Brad"], ["last_name", "Beggs"], ["password_digest", "$2a$12$cyEDZ1bh52rFppAS07tl1eSt2czX8BMlzvp.mCdzJgHzmEhR6y7/u"], ["street_address", "111 One St"], ["city", "Seattle"], ["state", "WA"], ["zip_code", "98711"], ["email", "bgs@gmail.com"], ["phone", "425-425-1234"], ["created_at", "2020-10-08 20:48:50.148850"], ["updated_at", "2020-10-08 20:48:50.148850"]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["email", "bgs@gmail.com"], ["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers]   [1m[36mReservation Load (5.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mReceipt Load (1.7ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (646.64ms)
+Completed 201 Created in 1271ms (Views: 545.6ms | ActiveRecord: 173.9ms | Allocations: 17724)
+
+

@@ -1,15 +1,24 @@
 class Api::V1::UsersController < ApplicationController
+  
+  skip_before_action :authorized, only: [:create]
 
+  ########################
+  # create a new user and issue a JWT token
+  ########################
   def create
     user = User.create(user_params)
     
     if user.valid?
+      @token = encode_token(user_id: user.id)
+
       render json: {
-        user: UserSerializer.new(user)
+        user: UserSerializer.new(user), jwt: @token 
       }, status: :created
-      
+    
     else
-      render json: {error: 'Failed to create a user'}, status: :not_acceptable
+      render json: {
+        error: 'Failed to create a user; User not unique? Or user did not provide first and last name'
+      }, status: :not_acceptable
     end
   end
 
@@ -22,10 +31,12 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     user = User.find_by(id: params[:id])
+
     if user
       render json: user
     else
-      render json: { message: 'This User ID does not exist' }
+      render json: { 
+        message: 'This User ID does not exist' }
     end
   end
 
