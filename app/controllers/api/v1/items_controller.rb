@@ -14,3 +14,11 @@ class Api::V1::ItemsController < ApplicationController
     end
   end
 end
+
+# class PostsController < ApplicationController   
+#    def index       
+#    # Runs a SQL join with the users table.   
+#    posts = Post.includes(:author).all          
+#        render json: posts    
+#     end
+#   end

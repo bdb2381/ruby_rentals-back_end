@@ -6,6 +6,10 @@ Rails.application.routes.draw do
       resources :reservations
       resources :receipts
       resources :users
+
+      post '/login', to: 'auth#create'
+      get '/current_user', to: 'users#profile'
+
     end
   end
 end
