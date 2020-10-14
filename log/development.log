@@ -36267,3 +36267,198 @@ Processing by Api::V1::ItemsController#index as JSON
 Completed 200 OK in 956ms (Views: 921.3ms | ActiveRecord: 40.2ms | Allocations: 43801)
 
 
+Started GET "/api/v1/items/" for ::1 at 2020-10-13 21:39:11 -0700
+Processing by Api::V1::ItemsController#index as JSON
+  Parameters: {"item"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (3.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (32.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (333.83ms)
+Completed 200 OK in 346ms (Views: 304.1ms | ActiveRecord: 41.3ms | Allocations: 29411)
+
+
+Started GET "/api/v1/items/" for ::1 at 2020-10-13 21:39:24 -0700
+Processing by Api::V1::ItemsController#index as JSON
+  Parameters: {"item"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mInventory Load (0.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."item_id" = $1[0m  [["item_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/items_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (120.03ms)
+Completed 200 OK in 131ms (Views: 125.1ms | ActiveRecord: 5.2ms | Allocations: 29407)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:39:38 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 16906ms (Views: 4.0ms | ActiveRecord: 2.4ms | Allocations: 5648)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:40:41 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 451ms (Views: 4.8ms | ActiveRecord: 12.0ms | Allocations: 11724)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:41:27 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+Started GET "/api/v1/users" for ::1 at 2020-10-13 21:49:38 -0700
+Started GET "/api/v1/users" for ::1 at 2020-10-13 21:49:38 -0700
+Started GET "/api/v1/users" for ::1 at 2020-10-13 21:49:38 -0700
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 490552ms (Views: 87.0ms | ActiveRecord: 17.3ms | Allocations: 34692)
+
+
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]", "first_name"=>"Brad", "last_name"=>"Beggs", "street_address"=>"111 One St", "city"=>"Seattle", "state"=>"WA", "zip_code"=>98711, "phone"=>"425-425-1234"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 432)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 308)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:49:45 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 129.6ms | Allocations: 1157)
+
+
+  
+ActiveRecord::StatementInvalid (can't cast ActionController::Parameters):
+  
+app/controllers/api/v1/auth_controller.rb:6:in `create'
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:50:55 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 8.2ms | Allocations: 3630)
+
+
+  
+ActiveRecord::StatementInvalid (can't cast ActionController::Parameters):
+  
+app/controllers/api/v1/auth_controller.rb:6:in `create'
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:51:59 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (104.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 401 Unauthorized in 14534ms (Views: 56.2ms | ActiveRecord: 240.6ms | Allocations: 48482)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:52:47 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 401 Unauthorized in 467ms (Views: 4.0ms | ActiveRecord: 21.3ms | Allocations: 11778)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:53:03 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 365ms (Views: 2.7ms | ActiveRecord: 2.2ms | Allocations: 1707)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:53:33 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 459ms (Views: 9.7ms | ActiveRecord: 16.0ms | Allocations: 14202)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:54:08 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 401 Unauthorized in 53561ms (Views: 51.6ms | ActiveRecord: 32.5ms | Allocations: 62121)
+
+
+Started POST "/api/v1/login/" for ::1 at 2020-10-13 21:55:07 -0700
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"test@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `current_user'
+[active_model_serializers]   [1m[36mReservation Load (8.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:14:in `create'
+[active_model_serializers]   [1m[36mReceipt Load (2.0ms)[0m  [1m[34mSELECT "receipts".* FROM "receipts" INNER JOIN "reservations" ON "receipts"."id" = "reservations"."receipt_id" WHERE "reservations"."user_id" = $1[0m  [["user_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:14:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (333.99ms)
+Completed 202 Accepted in 864ms (Views: 315.2ms | ActiveRecord: 40.5ms | Allocations: 22808)
+
+
