@@ -1,5 +1,8 @@
 class Api::V1::ItemsController < ApplicationController
 
+  skip_before_action :authorized, only: [:index, :show]  
+  # non protected view for index and show
+
   def index
     items = Item.all
     render json: items

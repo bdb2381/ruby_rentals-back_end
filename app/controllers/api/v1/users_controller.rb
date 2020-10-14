@@ -1,8 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   
-  ########################
-  # uncomment before_action when ready to implement auth on front end
-  # skip_before_action :authorized, only: [:create]
+  skip_before_action :authorized, only: [:create]
 
   ########################
   # user accesses profile with a new JWT token
