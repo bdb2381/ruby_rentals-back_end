@@ -6,6 +6,7 @@ class Api::V1::UsersController < ApplicationController
   # user accesses profile with a new JWT token
   ########################
   def profile
+    
     render json: { 
       user: UserSerializer.new(current_user)
     }, status: :accepted

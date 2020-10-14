@@ -8,7 +8,9 @@ Rails.application.routes.draw do
       resources :users
 
       post '/login', to: 'auth#create'
-      get '/current_user', to: 'users#profile'
+      # get '/current_user', to: 'users#profile'
+      
+      get '/reauth', to: 'auth#reauth'
 
     end
   end

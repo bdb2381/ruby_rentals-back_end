@@ -3,6 +3,7 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   def encode_token(payload)
+    
     # payload is the user 
     JWT.encode(payload, 'What_SHALL_IDO?!')
   end
@@ -29,23 +30,34 @@ class ApplicationController < ActionController::API
   end 
 
   def current_user
+    
     if decoded_token
       # example: decoded_token=> [{"user_id"=>1}, {"alg"=>"HS256"}]
       # or nil if we can't decode the token
       user_id = decoded_token[0]['user_id']
       user = User.find_by(id: user_id)
+      
     end
   end
  
+  # make sure there is a current_user
   def logged_in?
     !!current_user
+    
   end
 
   def authorized
-    render json: { 
-      message: 'Please log in'
-    },status: :unauthorized
-      unless logged_in?
+    
+    if logged_in?
+    else 
+      render json: { 
+          message: 'Please log in'
+        },status: :unauthorized
+    
+    # render json: { 
+    #   message: 'Please log in'
+    # },status: :unauthorized
+    #   unless logged_in?
       end
   end 
 end 
