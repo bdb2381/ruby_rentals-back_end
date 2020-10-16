@@ -43,7 +43,6 @@ class ApplicationController < ActionController::API
   # make sure there is a current_user
   def logged_in?
     !!current_user
-    
   end
 
   def authorized
@@ -58,6 +57,8 @@ class ApplicationController < ActionController::API
     #   message: 'Please log in'
     # },status: :unauthorized
     #   unless logged_in?
+    #   end
       end
   end 
-end 
+
+end # end class 
