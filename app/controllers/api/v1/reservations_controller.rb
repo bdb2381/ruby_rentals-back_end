@@ -1,5 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
 
+  skip_before_action :authorized, only: [:create, :show]
+
   def index
     reservations = Reservation.all
     render json: reservations
@@ -20,29 +22,28 @@ class Api::V1::ReservationsController < ApplicationController
     #   if Inventory.count(rental_status == "true") && match quanity in reservation request    
     
     # find (by id) an item's inventory and how many are available
-    if Item.find(:id).inventory.where(rental_status: true).count >= reservation.requested_quanitity
+    # if Item.find(:id).inventory.where(rental_status: true).count >= reservation.requested_quanitity
       # do something
-    byebug 
-    else
-      # return an error message. Not enough items available
+
+      reservation = Reservation.create(reservation_params)
+      if reservation.valid?
+        render json: { 
+          reservation: ReservationSerializer.new(reservation)
+        },
+        status: :created
+      else 
+        render json: {
+          error: 'Failed to create the reservation.'
+      },
+      status: :not_acceptable
     end
-
-
-
-    reservation = Reservation.find_by
-    
-    
   end
-
-
-
 
 
 private
 
 def reservation_params
-  params.require(:reservation).permit(
-  :id, :start_date,:end_date,:user_id, :receipt_id, :inventory_id)
+  params.require(:reservation).permit(:id, :start_date,:end_date,:user_id, :receipt_id, :inventory_id)
 end
 
 end  # end class 
@@ -57,6 +58,3 @@ end  # end class
 # // cartItems[0].returnDate
 # // cartItems[0].startDate
 # // need receipt id 
-
-
-   
