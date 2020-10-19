@@ -1,14 +1,14 @@
 class Api::V1::ReceiptsController < ApplicationController
   
-  skip_before_action :authorized, only: [:index, :show, :create]
+  # skip_before_action :authorized, only: [:index, :show, :create]
   
   def index
-    receipts = Receipts.all
+    receipts = Receipt.all
     render json: receipts
   end
 
   def show
-    receipt = Receipts.find_by(params[:id])
+    receipt = Receipt.find_by(id: params[:id])
     if receipt
       render json: receipt
     else 

@@ -8,7 +8,7 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def show
-    reservation = Reservations.find_by(params[:id])
+    reservation = Reservation.find_by(id: params[:id])
     if reservation
       render json: reservation
     else 
