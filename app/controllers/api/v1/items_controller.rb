@@ -4,7 +4,7 @@ class Api::V1::ItemsController < ApplicationController
   # non protected view for index and show
 
   def index
-    items = Item.all
+    items = Item.includes(:inventory).all
     render json: items
   end
 

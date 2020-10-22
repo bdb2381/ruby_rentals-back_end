@@ -24,8 +24,9 @@ class Api::V1::ReservationsController < ApplicationController
     # find (by id) an item's inventory and how many are available
     # if Item.find(:id).inventory.where(rental_status: true).count >= reservation.requested_quanitity
       # do something
-
+ 
       reservation = Reservation.create(reservation_params)
+      
       if reservation.valid?
         render json: { 
           reservation: ReservationSerializer.new(reservation)
