@@ -33,9 +33,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
 
-
   def index
-    users = User.all
+    users = User.include(:reservation, :receipts).all
     render json: users
   end
 

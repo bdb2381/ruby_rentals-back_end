@@ -3,7 +3,7 @@ class Api::V1::ReceiptsController < ApplicationController
   skip_before_action :authorized, only: [:index, :show, :create]
   
   def index
-    receipts = Receipt.all
+    receipts = Receipt.include(:reservation).all
     render json: receipts
   end
 
