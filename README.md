@@ -1,24 +1,33 @@
-# README
+## Welcome to Ruby Rentals: Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Description 
+Owners of small to mid-size outdoor adventure gear (camping, bikes, skies, etc) rental companies offer their equipment rentals online. 
 
-Things you may want to cover:
+Their customer can see current available inventory, prices, and make a reservation. 
 
-* Ruby version
+This is an early beta of the user/client side.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Installations
+- Fork and clone repository.
+- Navigate to the cloned the repository.
+- 'bundle install' in the terminal.
+- Run 'sudo service postgresql start' before starting
+- Run 'rails db:migrate' in the terminal.
+- Run 'rails db:seed' in the terminal for testing data.
+- Run 'rails s' to begin server and navigate to your browser 'localhost:3000' (or the server you are running) to view the website!
 
-* Database initialization
+# Ruby version
+Application runs on Ruby 2.6.1
+For `rvm` users, be sure to run:
+'rvm use ruby 2.6.1'
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
+- Ruby on Rails ActiveModelSerializer for the API
+- Bcrypt using JWT tokens 
 
-* Deployment instructions
 
-* ...
+## Frontend
+https://github.com/bdb2381/ruby_rentals-front_end
